@@ -9,7 +9,7 @@
 
   <p align="center">
     <a href="https://www.npmjs.com/package/create-semestack"><img src="https://img.shields.io/npm/v/create-semestack?color=2196F3&style=flat-square" alt="NPM Version"></a>
-    <a href="https://github.com/yourusername/semestack/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/create-semestack?color=2196F3&style=flat-square" alt="License"></a>
+    <a href="https://github.com/EmhaHasyim/semestack/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/create-semestack?color=2196F3&style=flat-square" alt="License"></a>
   </p>
 </div>
 
