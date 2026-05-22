@@ -1,6 +1,6 @@
 {
 	"name": "create-semestack",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"bin": {
 		"create-semestack": "./bin/cli.js"
@@ -21,7 +21,6 @@
 	},
 	"dependencies": {
 		"@clack/prompts": "^1.4.0",
-		"@scalar/hono-api-reference": "^0.10.18",
 		"kolorist": "^1.8.0"
 	},
 	"devDependencies": {

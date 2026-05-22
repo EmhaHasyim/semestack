@@ -3,7 +3,7 @@ import { getHealth, getHello } from "./lib/api/client";
 import logoAvif from "./assets/semestack_512.avif";
 import logoWebp from "./assets/semestack_512.webp";
 
-const stack: string[] = __STACK__;
+const stack: string[] = ["Solid","Elysia","Vite","Cloudflare Workers"];
 
 export default function App() {
 	const [nameInput, setNameInput] = createSignal("");
