@@ -15,7 +15,7 @@
 
 ---
 
-**Semestack** (v0.1.0) is a universal fullstack framework CLI tool that helps you instantly scaffold a modern, full-stack web application. It combines the best of frontend and backend technologies with zero configuration, ready to deploy.
+**Semestack** (v0.1.1) is a universal fullstack framework CLI tool that helps you instantly scaffold a modern, full-stack web application. It combines the best of frontend and backend technologies with zero configuration, ready to deploy.
 
 ## ✨ Features
 
