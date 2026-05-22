@@ -1,0 +1,21 @@
+{
+	"name": "__STACK_NAME__",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"preview": "vite build && wrangler dev",
+		"deploy": "vite build && wrangler deploy"
+	},
+	"dependencies": {
+		"@hono/zod-openapi": "^1.4.0",
+		"@scalar/hono-api-reference": "^0.10.16",
+		"hono": "^4.12.21",
+		"miniflare": "^4.20260520.0",
+		"zod": "^4.4.3"
+	},
+	"devDependencies": {
+		"@cloudflare/vite-plugin": "^1.37.3",
+		"wrangler": "^4.93.1"
+	}
+}
