@@ -8,5 +8,11 @@ export default defineConfig({
 	sourcemap: true,
 	dts: true,
 	target: "node18",
+	platform: "node",
 	shims: true,
+	minify: true,
+	deps: {
+		onlyBundle: false,
+		alwaysBundle: ["@clack/prompts", "kolorist"],
+	},
 });

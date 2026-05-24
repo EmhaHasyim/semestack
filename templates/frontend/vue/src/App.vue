@@ -58,9 +58,17 @@ async function sendGreeting() {
 		class="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-500/30 selection:text-blue-900 flex flex-col relative z-0"
 	>
 		<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
-			<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/30 rounded-full blur-[120px] animate-pulse"></div>
-			<div class="absolute top-[10%] right-[-10%] w-[50%] h-[50%] bg-fuchsia-500/30 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1s"></div>
-			<div class="absolute bottom-[-10%] left-[20%] w-[60%] h-[60%] bg-emerald-500/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s"></div>
+			<div
+				class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/30 rounded-full blur-[120px] animate-pulse"
+			></div>
+			<div
+				class="absolute top-[10%] right-[-10%] w-[50%] h-[50%] bg-fuchsia-500/30 rounded-full blur-[120px] animate-pulse"
+				style="animation-delay: 1s"
+			></div>
+			<div
+				class="absolute bottom-[-10%] left-[20%] w-[60%] h-[60%] bg-emerald-500/20 rounded-full blur-[120px] animate-pulse"
+				style="animation-delay: 2s"
+			></div>
 		</div>
 
 		<header
@@ -77,7 +85,10 @@ async function sendGreeting() {
 							<img :src="logoWebp" alt="Semestack Logo" class="w-full h-full object-cover" />
 						</picture>
 					</div>
-					<span class="text-lg font-bold tracking-tight text-slate-800 hidden sm:block drop-shadow-sm">Semestack</span>
+					<span
+						class="text-lg font-bold tracking-tight text-slate-800 hidden sm:block drop-shadow-sm"
+						>Semestack</span
+					>
 				</div>
 
 				<div
@@ -108,10 +119,12 @@ async function sendGreeting() {
 				<h1
 					class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-800 drop-shadow-sm"
 				>
-					{{ stack[0] }} <span class="text-blue-500">+</span> {{ stack[1] }} <span class="text-blue-500">+</span> {{ stack[3] }}
+					{{ stack[0] }} <span class="text-blue-500">+</span> {{ stack[1] }}
+					<span class="text-blue-500">+</span> {{ stack[3] }}
 				</h1>
 				<p class="text-lg/8 md:text-xl/8 text-slate-700 max-w-2xl font-medium drop-shadow-sm">
-					A CLI tool to instantly scaffold a modern, full-stack web application. It combines the best of frontend and backend technologies with zero configuration, ready to deploy.
+					A CLI tool to instantly scaffold a modern, full-stack web application. It combines the
+					best of frontend and backend technologies with zero configuration, ready to deploy.
 				</p>
 			</div>
 
@@ -121,35 +134,50 @@ async function sendGreeting() {
 				>
 					<div class="p-6 border-b border-white/30 flex justify-between items-center bg-white/10">
 						<div>
-							<h2 class="text-sm font-bold text-slate-800">
-								Edge Latency Ping
-							</h2>
-							<p class="text-xs text-slate-600 mt-0.5 font-medium">Measure response time from the edge</p>
+							<h2 class="text-sm font-bold text-slate-800">Edge Latency Ping</h2>
+							<p class="text-xs text-slate-600 mt-0.5 font-medium">
+								Measure response time from the edge
+							</p>
 						</div>
-						<div class="px-2 py-1 rounded-lg bg-white/40 shadow-sm text-[10px] font-mono text-slate-700 font-bold border border-white/50">
+						<div
+							class="px-2 py-1 rounded-lg bg-white/40 shadow-sm text-[10px] font-mono text-slate-700 font-bold border border-white/50"
+						>
 							GET /api/health
 						</div>
 					</div>
 
-					<div
-						class="flex-1 p-6 flex flex-col items-center justify-center min-h-[140px]"
-					>
-						<div v-if="pingLoading" class="flex flex-col items-center starting:opacity-0 opacity-100 transition-opacity duration-500">
+					<div class="flex-1 p-6 flex flex-col items-center justify-center min-h-[140px]">
+						<div
+							v-if="pingLoading"
+							class="flex flex-col items-center starting:opacity-0 opacity-100 transition-opacity duration-500"
+						>
 							<div class="relative flex items-center justify-center size-14 mb-2">
-								<div class="absolute inset-0 rounded-full border-2 border-blue-400/50 animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
-								<div class="absolute inset-2 rounded-full border-2 border-blue-500/50 animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite_0.3s]"></div>
-								<div class="absolute inset-5 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)]"></div>
+								<div
+									class="absolute inset-0 rounded-full border-2 border-blue-400/50 animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite]"
+								></div>
+								<div
+									class="absolute inset-2 rounded-full border-2 border-blue-500/50 animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite_0.3s]"
+								></div>
+								<div
+									class="absolute inset-5 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+								></div>
 							</div>
-							<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase animate-pulse">Contacting Edge...</span>
+							<span
+								class="text-[10px] font-bold tracking-widest text-slate-500 uppercase animate-pulse"
+								>Contacting Edge...</span
+							>
 						</div>
 						<div
 							v-else-if="pingStatus === 'success'"
 							class="flex flex-col items-center starting:opacity-0 starting:scale-95 opacity-100 scale-100 transition-all duration-300"
 						>
 							<div class="flex items-baseline gap-1 text-blue-700 drop-shadow-sm">
-								<span class="text-4xl font-black font-mono tracking-tighter">{{ pingLatency }}</span><span class="text-lg font-bold">ms</span>
+								<span class="text-4xl font-black font-mono tracking-tighter">{{ pingLatency }}</span
+								><span class="text-lg font-bold">ms</span>
 							</div>
-							<span class="text-[11px] text-slate-600 font-mono mt-2 bg-white/50 shadow-sm px-2 py-0.5 rounded-md border border-white/50">
+							<span
+								class="text-[11px] text-slate-600 font-mono mt-2 bg-white/50 shadow-sm px-2 py-0.5 rounded-md border border-white/50"
+							>
 								{{ systemTime }}
 							</span>
 						</div>
@@ -183,25 +211,46 @@ async function sendGreeting() {
 				>
 					<div class="p-6 border-b border-white/30 flex justify-between items-center bg-white/10">
 						<div>
-							<h2 class="text-sm font-bold text-slate-800">
-								Interactive Greeting
-							</h2>
-							<p class="text-xs text-slate-600 mt-0.5 font-medium">Send a parameter to the edge API</p>
+							<h2 class="text-sm font-bold text-slate-800">Interactive Greeting</h2>
+							<p class="text-xs text-slate-600 mt-0.5 font-medium">
+								Send a parameter to the edge API
+							</p>
 						</div>
-						<div class="px-2 py-1 rounded-lg bg-white/40 shadow-sm text-[10px] font-mono text-slate-700 font-bold border border-white/50">
+						<div
+							class="px-2 py-1 rounded-lg bg-white/40 shadow-sm text-[10px] font-mono text-slate-700 font-bold border border-white/50"
+						>
 							GET /api/hello
 						</div>
 					</div>
 
-					<div
-						class="flex-1 p-6 flex flex-col items-center justify-center min-h-[140px]"
-					>
-						<div v-if="greetingLoading" class="flex flex-col items-center gap-3 starting:opacity-0 opacity-100 transition-opacity duration-500">
-							<svg class="size-8 animate-spin text-blue-600 drop-shadow-md" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-								<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-								<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+					<div class="flex-1 p-6 flex flex-col items-center justify-center min-h-[140px]">
+						<div
+							v-if="greetingLoading"
+							class="flex flex-col items-center gap-3 starting:opacity-0 opacity-100 transition-opacity duration-500"
+						>
+							<svg
+								class="size-8 animate-spin text-blue-600 drop-shadow-md"
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+							>
+								<circle
+									class="opacity-25"
+									cx="12"
+									cy="12"
+									r="10"
+									stroke="currentColor"
+									stroke-width="4"
+								></circle>
+								<path
+									class="opacity-75"
+									fill="currentColor"
+									d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+								></path>
 							</svg>
-							<span class="text-xs font-bold text-slate-500 animate-pulse tracking-wide uppercase">Processing...</span>
+							<span class="text-xs font-bold text-slate-500 animate-pulse tracking-wide uppercase"
+								>Processing...</span
+							>
 						</div>
 						<div
 							v-else-if="greetingMessage"
@@ -224,7 +273,7 @@ async function sendGreeting() {
 							Awaiting input
 						</span>
 					</div>
-					
+
 					<div class="p-4 border-t border-white/30 bg-white/10">
 						<form @submit.prevent="sendGreeting" class="flex gap-2">
 							<input
@@ -247,10 +296,10 @@ async function sendGreeting() {
 				</div>
 			</div>
 
-			<div
-				class="w-full max-w-4xl mx-auto flex flex-col gap-4 items-center"
-			>
-				<h3 class="text-[10px] font-bold tracking-widest uppercase text-slate-500 text-center drop-shadow-sm">
+			<div class="w-full max-w-4xl mx-auto flex flex-col gap-4 items-center">
+				<h3
+					class="text-[10px] font-bold tracking-widest uppercase text-slate-500 text-center drop-shadow-sm"
+				>
 					Configured Project Tech Stack
 				</h3>
 				<div class="flex flex-wrap items-center justify-center gap-3">

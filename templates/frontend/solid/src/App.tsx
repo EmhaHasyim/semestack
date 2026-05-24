@@ -57,8 +57,14 @@ export default function App() {
 		<div class="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-blue-500/30 selection:text-blue-900 flex flex-col relative z-0">
 			<div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
 				<div class="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] bg-blue-500/30 rounded-full blur-[120px] animate-pulse"></div>
-				<div class="absolute top-[10%] right-[-10%] w-[50%] h-[50%] bg-fuchsia-500/30 rounded-full blur-[120px] animate-pulse" style="animation-delay: 1s;"></div>
-				<div class="absolute bottom-[-10%] left-[20%] w-[60%] h-[60%] bg-emerald-500/20 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+				<div
+					class="absolute top-[10%] right-[-10%] w-[50%] h-[50%] bg-fuchsia-500/30 rounded-full blur-[120px] animate-pulse"
+					style="animation-delay: 1s;"
+				></div>
+				<div
+					class="absolute bottom-[-10%] left-[20%] w-[60%] h-[60%] bg-emerald-500/20 rounded-full blur-[120px] animate-pulse"
+					style="animation-delay: 2s;"
+				></div>
 			</div>
 
 			<header class="relative z-10 w-full bg-white/30 backdrop-blur-xl border-b border-white/50 shadow-[0_4px_30px_rgba(0,0,0,0.05)]">
@@ -71,39 +77,45 @@ export default function App() {
 								<img src={logoWebp} alt="Semestack Logo" class="w-full h-full object-cover" />
 							</picture>
 						</div>
-						<span class="text-lg font-bold tracking-tight text-slate-800 hidden sm:block drop-shadow-sm">Semestack</span>
+						<span class="text-lg font-bold tracking-tight text-slate-800 hidden sm:block drop-shadow-sm">
+							Semestack
+						</span>
 					</div>
 					<div class="flex items-center gap-2 px-3 py-1 bg-white/40 backdrop-blur-md border border-white/60 shadow-sm rounded-full">
 						<span class="relative flex size-2">
 							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
 							<span class="relative inline-flex rounded-full size-2 bg-blue-500"></span>
 						</span>
-						<span class="text-[11px] font-semibold text-blue-700 uppercase tracking-wider">Edge Active</span>
+						<span class="text-[11px] font-semibold text-blue-700 uppercase tracking-wider">
+							Edge Active
+						</span>
 					</div>
 				</div>
 			</header>
 
 			<main class="relative z-10 flex-1 w-full max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-24 flex flex-col items-center gap-16">
-				
 				<div class="flex flex-col items-center text-center gap-6 max-w-3xl w-full">
 					<div class="inline-flex items-center px-3 py-1 text-xs font-semibold text-blue-800 bg-white/40 backdrop-blur-md border border-white/50 shadow-sm rounded-full tracking-wide">
 						UNIVERSAL FULLSTACK FRAMEWORK
 					</div>
 					<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-800 drop-shadow-sm">
-						{stack[0]} <span class="text-blue-500">+</span> {stack[1]} <span class="text-blue-500">+</span> {stack[3]}
+						{stack[0]} <span class="text-blue-500">+</span> {stack[1]}{" "}
+						<span class="text-blue-500">+</span> {stack[3]}
 					</h1>
 					<p class="text-lg/8 md:text-xl/8 text-slate-700 max-w-2xl font-medium drop-shadow-sm">
-						A CLI tool to instantly scaffold a modern, full-stack web application. It combines the best of frontend and backend technologies with zero configuration, ready to deploy.
+						A CLI tool to instantly scaffold a modern, full-stack web application. It combines the
+						best of frontend and backend technologies with zero configuration, ready to deploy.
 					</p>
 				</div>
 
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-4xl mx-auto">
-					
 					<div class="flex flex-col bg-white/30 backdrop-blur-2xl border border-white/50 rounded-3xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] overflow-hidden transition-all duration-300 hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:bg-white/40">
 						<div class="p-6 border-b border-white/30 flex justify-between items-center bg-white/10">
 							<div>
 								<h2 class="text-sm font-bold text-slate-800">Edge Latency Ping</h2>
-								<p class="text-xs text-slate-600 mt-0.5 font-medium">Measure response time from the edge</p>
+								<p class="text-xs text-slate-600 mt-0.5 font-medium">
+									Measure response time from the edge
+								</p>
 							</div>
 							<div class="px-2 py-1 rounded-lg bg-white/40 shadow-sm text-[10px] font-mono text-slate-700 font-bold border border-white/50">
 								GET /api/health
@@ -120,24 +132,34 @@ export default function App() {
 											<div class="absolute inset-2 rounded-full border-2 border-blue-500/50 animate-[ping_1.5s_cubic-bezier(0,0,0.2,1)_infinite_0.3s]" />
 											<div class="absolute inset-5 rounded-full bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.6)]" />
 										</div>
-										<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase animate-pulse">Contacting Edge...</span>
+										<span class="text-[10px] font-bold tracking-widest text-slate-500 uppercase animate-pulse">
+											Contacting Edge...
+										</span>
 									</div>
 								}
 							>
 								<Show when={pingStatus() === "success"}>
 									<div class="flex flex-col items-center starting:opacity-0 starting:scale-95 opacity-100 scale-100 transition-all duration-300">
 										<div class="flex items-baseline gap-1 text-blue-700 drop-shadow-sm">
-											<span class="text-4xl font-black font-mono tracking-tighter">{pingLatency()}</span>
+											<span class="text-4xl font-black font-mono tracking-tighter">
+												{pingLatency()}
+											</span>
 											<span class="text-lg font-bold">ms</span>
 										</div>
-										<span class="text-[11px] text-slate-600 font-mono mt-2 bg-white/50 shadow-sm px-2 py-0.5 rounded-md border border-white/50">{systemTime()}</span>
+										<span class="text-[11px] text-slate-600 font-mono mt-2 bg-white/50 shadow-sm px-2 py-0.5 rounded-md border border-white/50">
+											{systemTime()}
+										</span>
 									</div>
 								</Show>
 								<Show when={pingStatus() === "error"}>
-									<span class="text-red-600 text-sm font-bold starting:opacity-0 opacity-100 transition-opacity duration-300 drop-shadow-sm">Connection Failed</span>
+									<span class="text-red-600 text-sm font-bold starting:opacity-0 opacity-100 transition-opacity duration-300 drop-shadow-sm">
+										Connection Failed
+									</span>
 								</Show>
 								<Show when={pingStatus() === "idle"}>
-									<span class="text-slate-500 font-mono text-sm font-medium starting:opacity-0 opacity-100 transition-opacity duration-300">Ready to ping</span>
+									<span class="text-slate-500 font-mono text-sm font-medium starting:opacity-0 opacity-100 transition-opacity duration-300">
+										Ready to ping
+									</span>
 								</Show>
 							</Show>
 						</div>
@@ -157,7 +179,9 @@ export default function App() {
 						<div class="p-6 border-b border-white/30 flex justify-between items-center bg-white/10">
 							<div>
 								<h2 class="text-sm font-bold text-slate-800">Interactive Greeting</h2>
-								<p class="text-xs text-slate-600 mt-0.5 font-medium">Send a parameter to the edge API</p>
+								<p class="text-xs text-slate-600 mt-0.5 font-medium">
+									Send a parameter to the edge API
+								</p>
 							</div>
 							<div class="px-2 py-1 rounded-lg bg-white/40 shadow-sm text-[10px] font-mono text-slate-700 font-bold border border-white/50">
 								GET /api/hello
@@ -169,22 +193,44 @@ export default function App() {
 								when={!greetingLoading()}
 								fallback={
 									<div class="flex flex-col items-center gap-3 starting:opacity-0 opacity-100 transition-opacity duration-500">
-										<svg class="size-8 animate-spin text-blue-600 drop-shadow-md" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-											<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-											<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+										<svg
+											class="size-8 animate-spin text-blue-600 drop-shadow-md"
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+										>
+											<circle
+												class="opacity-25"
+												cx="12"
+												cy="12"
+												r="10"
+												stroke="currentColor"
+												stroke-width="4"
+											></circle>
+											<path
+												class="opacity-75"
+												fill="currentColor"
+												d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+											></path>
 										</svg>
-										<span class="text-xs font-bold text-slate-500 animate-pulse tracking-wide uppercase">Processing...</span>
+										<span class="text-xs font-bold text-slate-500 animate-pulse tracking-wide uppercase">
+											Processing...
+										</span>
 									</div>
 								}
 							>
 								<Show
 									when={greetingMessage()}
 									fallback={
-										<span class="text-slate-500 font-mono text-sm font-medium starting:opacity-0 opacity-100 transition-opacity duration-300">Awaiting input</span>
+										<span class="text-slate-500 font-mono text-sm font-medium starting:opacity-0 opacity-100 transition-opacity duration-300">
+											Awaiting input
+										</span>
 									}
 								>
 									<div class="flex flex-col items-center text-center starting:opacity-0 starting:scale-95 opacity-100 scale-100 transition-all duration-300">
-										<p class="text-blue-700 font-bold text-lg drop-shadow-sm">{greetingMessage()}</p>
+										<p class="text-blue-700 font-bold text-lg drop-shadow-sm">
+											{greetingMessage()}
+										</p>
 										<Show when={greetingRuntime()}>
 											<span class="mt-2 text-[10px] font-mono text-slate-600 bg-white/50 shadow-sm px-2 py-0.5 rounded-md border border-white/50">
 												Runtime: {greetingRuntime()}
@@ -232,7 +278,6 @@ export default function App() {
 						</For>
 					</div>
 				</div>
-
 			</main>
 
 			<footer class="w-full py-8 border-t border-white/30 bg-white/20 backdrop-blur-lg mt-auto relative z-10">
@@ -242,7 +287,6 @@ export default function App() {
 					</p>
 				</div>
 			</footer>
-			
 		</div>
 	);
 }

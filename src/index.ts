@@ -10,7 +10,7 @@ function getPackageManager(): "npm" | "bun" {
 }
 
 export async function main() {
-	intro("✨ Semestack v0.1.1 – Universal Fullstack Framework");
+	intro("✨ Semestack v0.1.2 – Universal Fullstack Framework");
 
 	const cliName = process.argv[2];
 	const options = await askQuestions(cliName);

@@ -15,7 +15,7 @@
 
 ---
 
-**Semestack** (v0.1.1) is a universal fullstack framework CLI tool that helps you instantly scaffold a modern, full-stack web application. It combines the best of frontend and backend technologies with zero configuration, ready to deploy.
+**Semestack** (v0.1.2) is a universal fullstack framework CLI tool that helps you instantly scaffold a modern, full-stack web application. It combines the best of frontend and backend technologies with zero configuration, ready to deploy.
 
 ## ✨ Features
 
@@ -30,6 +30,7 @@ With `create-semestack`, you can mix and match your favorite technologies:
 You can create a new Semestack project using your favorite package manager. You don't need to install anything globally!
 
 ### Using npm
+
 ```bash
 npx create-semestack@latest
 # or
@@ -37,6 +38,7 @@ npm create semestack@latest
 ```
 
 ### Using bun
+
 ```bash
 bun create semestack@latest
 ```
